@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   // constructor(private POKEMONS: Pokemon[]) { }
 
   title: string = 'pokemon-app';
-  pokemonList = POKEMONS;
+  pokemonList: Pokemon[] = POKEMONS;
 
 
 
