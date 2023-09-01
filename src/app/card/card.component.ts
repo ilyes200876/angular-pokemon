@@ -9,6 +9,7 @@ import { Pokemon } from '../pokemons';
 export class CardComponent implements OnInit  {
 
   pokemonList: Pokemon[] = POKEMONS;
+  pokemonSelected: Pokemon;
 
   ngOnInit(): void {
     console.log("Je viens de charger");
@@ -19,6 +20,11 @@ export class CardComponent implements OnInit  {
 
   selectPokemon(pokemon: Pokemon): void {
     console.log("Vous avez sélectionnez ce pokemon : " + pokemon.name);
+  }
+
+  showByNumberPokemon(i: number): void {
+    this.pokemonSelected = this.pokemonList[i-1];
+    console.log("Vous avez recherchez : " + this.pokemonSelected.name);
   }
 
 }
