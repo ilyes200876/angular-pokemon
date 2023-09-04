@@ -17,8 +17,10 @@ export class CardComponent implements OnInit  {
   pokemonSelected: Pokemon;
 
   ngOnInit(): void {
+    this.showByNumberPokemon(1);
     
     this.getPokemons();
+    
 
     console.log("Je viens de charger");
     console.table(this.pokemonList);
@@ -26,13 +28,13 @@ export class CardComponent implements OnInit  {
     this.selectPokemon(this.pokemonList[0]);
   }
 
-  selectPokemon(pokemon: Pokemon): void {
-    console.log("Vous avez sélectionnez ce pokemon : " + pokemon.name);
+  selectPokemon(pokemon: Pokemon){
+    
+    console.log(this.pokemonService.fetchOnePokemon(pokemon));
   }
 
-  showByNumberPokemon(i: number): void {
-    this.pokemonSelected = this.pokemonList[i-1];
-    console.log("Vous avez recherchez : " + this.pokemonSelected.name);
+  showByNumberPokemon(i: number) {
+    console.log(this.pokemonService.fetchById(i));
   }
 
   getPokemons(){
