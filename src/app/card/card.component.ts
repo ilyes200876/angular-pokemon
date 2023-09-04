@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
-import {POKEMONS} from '../mock-pokemons-list';
+// import {POKEMONS} from '../mock-pokemons-list';
 import { Pokemon } from '../pokemons';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-card',
@@ -8,10 +9,17 @@ import { Pokemon } from '../pokemons';
 })
 export class CardComponent implements OnInit  {
 
-  pokemonList: Pokemon[] = POKEMONS;
+  constructor (private pokemonService:PokemonService){
+
+  }
+
+  pokemonList: Pokemon[] = [];
   pokemonSelected: Pokemon;
 
   ngOnInit(): void {
+    
+    this.getPokemons();
+
     console.log("Je viens de charger");
     console.table(this.pokemonList);
 
@@ -27,4 +35,8 @@ export class CardComponent implements OnInit  {
     console.log("Vous avez recherchez : " + this.pokemonSelected.name);
   }
 
+  getPokemons(){
+    this.pokemonList = this.pokemonService.fetchAllPokemon();
+    return this.pokemonList;
+  }
 }
