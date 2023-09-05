@@ -34,7 +34,7 @@ export class CardComponent implements OnInit  {
   }
 
   showByNumberPokemon(i: number) {
-    console.log(this.pokemonService.fetchById(i));
+    console.log(this.pokemonService.fetchByIndex(i));
   }
 
   getPokemons(){

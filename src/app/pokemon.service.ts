@@ -13,12 +13,15 @@ export class PokemonService {
     return POKEMONS;
   }
 
-  fetchById(i: number){
+  fetchByIndex(i: number){
     return POKEMONS[i - 1].name;
   }
 
   fetchOnePokemon(pokemon: Pokemon){
     return("Vous avez sélectionnez ce pokemon : " + pokemon.name);
   }
-  
+  fetchById(i: number): Pokemon|undefined{
+    return POKEMONS[i];
+  }
+
 }

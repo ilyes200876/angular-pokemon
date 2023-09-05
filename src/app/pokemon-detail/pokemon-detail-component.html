@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-s-12">
-      <img src="" alt="">
+    <div class="col-12 col-lg-6">
+      <img src="{{ pokemon?.picture}}" alt="" >
     </div>
-    <div class="col-md-6 col-s-12">
-      <h4>Nom</h4>
-      <p>Hp</p>
-      <p>Cp</p>
-      <p>Types</p>
-      <p>Created</p>
-    </div>
+  
+      <div *ngIf="pokemon" class="col-12 col-lg-6">
+        <h4>Nom : {{ pokemon.name }}</h4>
+        <p>Hp: {{ pokemon.hp }}</p>
+        <p>Cp: {{ pokemon.cp }}</p>
+        <p>Types: {{ pokemon.types }}</p>
+        <p>Created: {{ pokemon.created }}</p>
+      </div>
   </div>
 </div>
