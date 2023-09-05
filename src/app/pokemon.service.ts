@@ -20,4 +20,5 @@ export class PokemonService {
   fetchOnePokemon(pokemon: Pokemon){
     return("Vous avez sélectionnez ce pokemon : " + pokemon.name);
   }
+  
 }
