@@ -13,6 +13,8 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserDetailtootedComponent } from './user-detailtooted/user-detailtooted.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { UserDetailtootedComponent } from './user-detailtooted/user-detailtooted
     PokemonDetailComponent,
     UserComponent,
     UserDetailComponent,
-    UserDetailtootedComponent
+    UserDetailtootedComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserDetailtootedComponent } from './user-detailtooted/user-detailtooted.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'pokemons/:id', component: PokemonDetailComponent},
   {path: 'user', component: UserComponent},
   {path: 'user/:id', component: UserDetailtootedComponent},
+  {path: 'contact', component: ContactComponent},
   {path: '**', component: Error404Component}
 ];
 
