@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { IUser } from '../IUser';
 import { UserService } from '../user.service';
 
@@ -9,13 +9,18 @@ import { UserService } from '../user.service';
   styles: [
   ]
 })
-export class UserDetailComponent {
+export class UserDetailComponent implements OnInit{
 
-  constructor(private userService: UserService){}
+  
 
   @Input() userC: IUser|undefined;
 
+  ngOnInit(): void {
+    // this.getById(0);
 
+  }
+
+  
 
   
 }

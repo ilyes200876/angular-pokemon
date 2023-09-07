@@ -12,6 +12,7 @@ import { Error404Component } from './error404/error404.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserDetailtootedComponent } from './user-detailtooted/user-detailtooted.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     Error404Component,
     PokemonDetailComponent,
     UserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserDetailtootedComponent
   ],
   imports: [
     BrowserModule,
