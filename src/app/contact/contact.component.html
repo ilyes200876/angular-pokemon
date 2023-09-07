@@ -1,4 +1,11 @@
-<form>
-  <input type="text" name="nom" [(ngModel)]="bookTitle">
-  <p>{{ bookTitle }}</p>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <input type="text" name="username" ngModel required>
+  <div>
+    <p>{{ messageUser }}</p>
+  </div>
+  <input type="password" name="password"  ngModel required>
+  <div>
+    <p>{{ messagePwd }}</p>
+  </div>
+  <button type="submit" [disabled]="!form.valid">Login</button>
 </form>
