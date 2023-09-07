@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserDetailtootedComponent } from './user-detailtooted/user-detailtooted.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactReactiveComponent } from './contact-reactive/contact-reactive.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'user', component: UserComponent},
   {path: 'user/:id', component: UserDetailtootedComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'contact2', component: ContactReactiveComponent},
   {path: '**', component: Error404Component}
 ];
 

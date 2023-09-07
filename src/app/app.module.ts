@@ -14,7 +14,8 @@ import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserDetailtootedComponent } from './user-detailtooted/user-detailtooted.component';
 import { ContactComponent } from './contact/contact.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactReactiveComponent } from './contact-reactive/contact-reactive.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { FormsModule } from '@angular/forms';
     UserComponent,
     UserDetailComponent,
     UserDetailtootedComponent,
-    ContactComponent
+    ContactComponent,
+    ContactReactiveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
